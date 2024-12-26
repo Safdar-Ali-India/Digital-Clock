@@ -1,4 +1,12 @@
- 
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    height: 100vh;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -29,49 +37,65 @@ nav {
     transform: scale(1.1);
 }
 
- 
+
+
+/* Center container */
 .center {
     display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    margin: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Title styling */
 .center h1 {
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 10px;
-    color: #555;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Clock styling */
 #clock {
-    font-size: 48px;
-    background: linear-gradient(90deg, #f39c12, #e67e22);
-    color: white;
-    padding: 20px 50px;
-    margin-top: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 64px;
     font-weight: bold;
+    background: linear-gradient(90deg, #ff8c00, #ffcc00);
+    color: #fff;
+    padding: 25px 60px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-in-out;
 }
 
-/* Span styles for additional info */
+#clock:hover {
+    transform: scale(1.05);
+}
+
+/* Info span */
 span {
-    font-size: 20px;
-    margin-top: 10px;
-    color: #000000;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #e0e0e0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     #clock {
-        font-size: 36px;
-        padding: 15px 40px;
+        font-size: 28px;
+        padding: 20px 40px;
     }
-    nav button {
-        font-size: 12px;
-        padding: 6px 12px;
+
+    .center h1 {
+        font-size: 24px;
     }
 }
